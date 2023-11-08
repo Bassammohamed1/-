@@ -8,7 +8,7 @@
 <table class="table table-hover" style="margin-top:60px">
     @foreach (var item in Model)
     {
-        @if (item.Contains("سورة"))
+        @if (item.Contains("سورة") && item.Length <= 11)
         {
             <tr class="table-primary" dir="rtl">
                 <th scope="col">@item</th>
