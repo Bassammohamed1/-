@@ -17,14 +17,11 @@ namespace Search_In_Moshaf.Controllers
         {
             return View();
         }
-        public IActionResult Result()
-        {
-            return View();
-        }
         public IActionResult Filter(string searchString)
         {
             var alldata = _context.sewar.ToList();
-             List<string> result = new List<string>();
+            List<string> result = new List<string>();
+            searchString = ' ' + searchString + ' ';
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -41,7 +38,7 @@ namespace Search_In_Moshaf.Controllers
                         }
                     }
                 }
-                return View("Result",result);
+                return View("Result", result);
             }
             return View("Index");
         }
