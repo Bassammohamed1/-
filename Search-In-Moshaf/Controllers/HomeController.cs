@@ -28,6 +28,7 @@ namespace Search_In_Moshaf.Controllers
                 foreach (var item in alldata)
                 {
                     string[] s = item.Content.Split('.');
+                    s[0] = ' ' + s[0];
                     var matchingStrings = s.Where(s => s.Contains(searchString)).ToList();
                     if (matchingStrings.Count > 0)
                     {
