@@ -39,7 +39,7 @@ namespace Search_In_Moshaf.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("sewar");
+                    b.ToTable("sewar", (string)null);
 
                     b.HasData(
                         new
