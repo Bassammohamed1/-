@@ -3,9 +3,9 @@
     ViewData["Title"] = "إبحث في المصحف";
 }
 
-<h1 style="text-align:center; margin-top:50px">نتائج البحث</h1>
+<h1>نتائج البحث</h1>
 
-<table class="table table-hover" style="margin-top:60px">
+<table class="table table-hover">
     @foreach (var item in Model)
     {
         @if (item.Contains("سورة") && item.Length <= 13)
@@ -26,4 +26,6 @@
         }
     }
 </table>
-<a class="btn btn-primary" asp-controller="Home" asp-action="Index" style="margin-left:45%;margin-top:10px">الصفحة الرئيسية</a>
+<div class="button-container">
+    <a class="home-button" asp-controller="Home" asp-action="Index">الصفحة الرئيسية</a>
+</div>

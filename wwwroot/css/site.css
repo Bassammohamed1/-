@@ -1,20 +1,95 @@
-body {
-    background-image: url("../imgs/pexels.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 * {
-   font-family: "Amiri", serif;
+    font-family: "Amiri", serif;
 }
 
-html {
-    font-size: 14px;
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-@media (min-width: 768px) {
-    html {
+    .search-container h2 {
+        color: #000; 
+        margin-bottom: 20px;
+    }
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; 
+}
+
+    .search-bar input {
+        padding: 10px;
         font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        flex: 1;
+    }
+
+    .search-bar button {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        cursor: pointer;
+        background-color: purple;
+        color: white; 
+    }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.home-button {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px
+}
+
+table {
+    margin-top: 60px;
+    font-size: large;
+}
+/* 767 */
+@media (max-width: 600px) {
+    .search-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-bar button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-container h2 {
+        font-size: 16px;
+        margin-bottom: 15px;
     }
 }
 
@@ -25,8 +100,12 @@ html {
 html {
     position: relative;
     min-height: 100%;
+    font-size: 14px;
 }
 
 body {
+    background-image: url("../imgs/pexels.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 60px;
 }
